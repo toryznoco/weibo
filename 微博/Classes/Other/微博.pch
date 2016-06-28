@@ -1,0 +1,36 @@
+//
+//  微博.pch
+//  微博
+//
+//  Created by Tory on 15/9/17.
+//  Copyright © 2015年 normcore. All rights reserved.
+//
+
+#ifndef _WEIBO_PCH_
+#define _WEIBO_PCH_
+
+#import "UIView+Frame.h"
+#import "UIImage+Image.h"
+
+#define TRKeyWindow [UIApplication sharedApplication].keyWindow
+
+// ...表示宏定义的可变参数
+// __VA_ARGS__:表示函数里面的可变参数
+#ifdef DEBUG // 测试
+
+#define TRLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define TRLog(...)
+#endif
+
+/*        cell            */
+#define TRStatusCellMargin 10
+#define TRNameFont [UIFont systemFontOfSize:13]
+#define TRTimeFont [UIFont systemFontOfSize:12]
+#define TRSourceFont TRTimeFont
+#define TRTextFont [UIFont systemFontOfSize:15]
+#define TRScreenW [UIScreen mainScreen].bounds.size.width
+
+#endif
